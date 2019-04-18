@@ -15,7 +15,7 @@ class RegistrationsController < ApplicationController
 			@user.password = params[:registrations][:password]
 			@user.email = params[:registrations][:email]
 			@user.phone = params[:registrations][:phone]
-			if @user.save!
+			if @user.save
 				flash[:notice] = "User created"
 				redirect_to root_url
 			else
